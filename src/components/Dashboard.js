@@ -19,10 +19,11 @@ function Dashboard({ token }) {
 
   return (
     <div>
-      <h1>My Goals</h1>
+      <div>
+      <h1 style={{ color: 'red', fontSize: '54px', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>MY GOALS</h1> </div>
       {goals.map((goal) => (
         <div key={goal._id}>
-          <h2>{goal.title}</h2>
+          <h1>{goal.title}</h1>
           <p>{goal.description}</p>
           <Link to={`/tasks/new/${goal._id}`}>Add Task</Link>
         </div>
